@@ -1,0 +1,27 @@
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+  "name": "Thomas Farias",
+  "email": "thomasfarias@acme.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:3333/sessions/password
+Content-Type: application/json
+
+{
+  "email": "thomasfarias@acme.com",
+  "password": "123456"
+}
+
+###
+
+GET http://localhost:3333/profile/
+Content-Type: application/json
+
+token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MGQ3ZDQxMS0xZjc5LTQwNjEtOTdjYS02OGRiY2Q3NWRlZmUiLCJpYXQiOjE3MTU3MjQzNjMsImV4cCI6MTcxNjMyOTE2M30.c5iOczouS1ZX2Nngef1WNybNHlOERjaVx0f5oXgKwfM
+
+Authorization: token 
